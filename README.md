@@ -3,22 +3,19 @@
 ## Usage
 
 ```sh
-docker run -it -v $ANDROID_HOME:/opt/android-sdk -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/home/ubuntu/.Xauthority --net=host yongjhih/android-studio
-```
-
-Include ~/.android:
-
-```sh
-docker run -it -v ~/.android:/home/ubuntu/.android \
-  -v $ANDROID_HOME:/opt/android-sdk -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/home/ubuntu/.Xauthority --net=host yongjhih/android-studio
-```
-
-Include ~/AndroidStudioProjects:
-
-```sh
-docker run -it -v ~/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
-  -v ~/.android:/home/ubuntu/.android \
-  -v $ANDROID_HOME:/opt/android-sdk -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/home/ubuntu/.Xauthority --net=host yongjhih/android-studio
+docker run -it \
+  --privileged
+  -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
+  -v $HOME/.android:/home/ubuntu/.android \
+  -v $HOME/.AndroidStudioPreview2.0:/home/ubuntu/.AndroidStudioPreview2.0 \
+  -v /dev/bus/usb:/dev/bus/usb \
+  -v /dev/kvm:/dev/kvm \
+  -v $ANDROID_HOME:/opt/android-sdk \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v $XAUTHORITY:/home/ubuntu/.Xauthority \
+  --net host \
+  yongjhih/android-studio
 ```
 
 ## Usage with docker-compose
