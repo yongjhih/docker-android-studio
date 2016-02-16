@@ -1,6 +1,5 @@
-# -v /opt/android-sdk:$ANDROID_HOME
-
 FROM yongjhih/ubuntu-openjdk-8
+#FROM yongjhih/ubuntu-openjdk-8-android
 
 ENV ANDROID_HOME /opt/android-sdk
 ENV ANDROID_STUDIO /opt/android-studio

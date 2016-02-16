@@ -1,0 +1,11 @@
+android-studio:
+    build: .
+    #image: yongjhih/android-studio
+    environment:
+        DISPLAY: $DISPLAY
+    volumes:
+        - $ANDROID_HOME:/opt/android-sdk
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - $XAUTHORITY:/home/ubuntu/.Xauthority
+        - /dev/kvm:/dev/kvm
+    net: host
