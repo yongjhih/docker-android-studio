@@ -21,6 +21,13 @@ docker run -it -v ~/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
   -v $ANDROID_HOME:/opt/android-sdk -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/home/ubuntu/.Xauthority --net=host yongjhih/android-studio
 ```
 
+## Usage with docker-compose
+
+```
+docker-compose up
+```
+
+
 ## Ref.
 
 * Download: [2.0 beta 2] (https://dl.google.com/dl/android/studio/ide-zips/2.0.0.11/android-studio-ide-143.2586769-linux.zip)

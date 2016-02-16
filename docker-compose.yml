@@ -1,6 +1,6 @@
 android-studio:
-    build: .
-    #image: yongjhih/android-studio
+    #build: .
+    image: yongjhih/android-studio
     environment:
         DISPLAY: $DISPLAY
     volumes:
