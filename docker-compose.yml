@@ -9,5 +9,10 @@ android-studio:
         - $XAUTHORITY:/home/ubuntu/.Xauthority
         - /dev/kvm:/dev/kvm
         - /dev/bus/usb:/dev/bus/usb
+        - $HOME/.AndroidStudioPreview2.0:/home/ubuntu/.AndroidStudioPreview2.0
+        - $HOME/.AndroidStudio1.5:/home/ubuntu/.AndroidStudio1.5
+        #- $HOME/.AndroidStudio1.4:/home/ubuntu/.AndroidStudio1.4
+        #- $HOME/.AndroidStudio1.3:/home/ubuntu/.AndroidStudio1.3
+        #- $HOME/.AndroidStudio:/home/ubuntu/.AndroidStudio
     net: host
     privileged: true
