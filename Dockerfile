@@ -4,8 +4,8 @@ FROM yongjhih/ubuntu-openjdk-8
 ENV ANDROID_HOME /opt/android-sdk
 ENV ANDROID_STUDIO /opt/android-studio
 
-#ENV ANDROID_STUDIO_ZIP https://dl.google.com/dl/android/studio/ide-zips/1.5.1.0/android-studio-ide-141.2456560-linux.zip
-ENV ANDROID_STUDIO_ZIP https://dl.google.com/dl/android/studio/ide-zips/2.0.0.11/android-studio-ide-143.2586769-linux.zip
+ENV ANDROID_STUDIO_ZIP https://dl.google.com/dl/android/studio/ide-zips/1.5.1.0/android-studio-ide-141.2456560-linux.zip
+#ENV ANDROID_STUDIO_ZIP https://dl.google.com/dl/android/studio/ide-zips/2.0.0.11/android-studio-ide-143.2586769-linux.zip
 
 RUN wget $ANDROID_STUDIO_ZIP -O tmp.zip && \
     unzip tmp.zip -d /opt && \
