@@ -8,4 +8,6 @@ android-studio:
         - /tmp/.X11-unix:/tmp/.X11-unix
         - $XAUTHORITY:/home/ubuntu/.Xauthority
         - /dev/kvm:/dev/kvm
+        - /dev/bus/usb:/dev/bus/usb
     net: host
+    privileged: true
