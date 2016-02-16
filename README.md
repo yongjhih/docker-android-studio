@@ -5,7 +5,23 @@
 
 ![](art/docker-android-studio.png)
 
-## Usage
+## Usage with docker-compose
+
+Beta:
+
+```
+wget https://github.com/yongjhih/docker-android-studio/raw/master/docker-compose.yml
+docker-compose up android-studio-beta
+```
+
+Stable:
+
+```
+wget https://github.com/yongjhih/docker-android-studio/raw/master/docker-compose.yml
+docker-compose up android-studio-stable
+```
+
+## Usage without docker-compose
 
 Beta (2.0-beta-2):
 
@@ -41,20 +57,6 @@ docker run -it \
   -v $XAUTHORITY:/home/ubuntu/.Xauthority \
   --net host \
   yongjhih/android-studio:1.5.1
-```
-
-## Usage with docker-compose
-
-Beta:
-
-```
-docker-compose up android-studio-beta
-```
-
-Stable:
-
-```
-docker-compose up android-studio-stable
 ```
 
 ## Ref.
