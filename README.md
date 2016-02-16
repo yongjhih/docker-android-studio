@@ -3,6 +3,8 @@
 [![](https://badge.imagelayers.io/yongjhih/android-studio:latest.svg)](https://imagelayers.io/?images=yongjhih/android-studio:latest)
 [![Join the chat at https://gitter.im/yongjhih/docker-android-studio](https://badges.gitter.im/yongjhih/docker-android-studio.svg)](https://gitter.im/yongjhih/docker-android-studio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+![](art/docker-android-studio.png)
+
 ## Usage
 
 Beta (2.0-beta-2):
