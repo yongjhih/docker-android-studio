@@ -2,6 +2,8 @@
 
 ## Usage
 
+[![Join the chat at https://gitter.im/yongjhih/docker-android-studio](https://badges.gitter.im/yongjhih/docker-android-studio.svg)](https://gitter.im/yongjhih/docker-android-studio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ```sh
 docker run -it \
   --privileged
