@@ -66,3 +66,7 @@ docker run -it \
 * http://tools.android.com/download/studio/stable
 * http://tools.android.com/download/studio/beta
 * http://tools.android.com/download/studio/canary
+
+## LICENSE
+
+Apache 2.0, 2015 8tory Inc.
