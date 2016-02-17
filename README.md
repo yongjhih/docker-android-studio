@@ -48,7 +48,7 @@ docker run -it \
   --privileged
   -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
   -v $HOME/.android:/home/ubuntu/.android \
-  -v $HOME/.AndroidStudioPreview2.0:/home/ubuntu/.AndroidStudioPreview2.0 \
+  -v $HOME/.AndroidStudio1.5:/home/ubuntu/.AndroidStudio1.5 \
   -v /dev/bus/usb:/dev/bus/usb \
   -v /dev/kvm:/dev/kvm \
   -v $ANDROID_HOME:/opt/android-sdk \
