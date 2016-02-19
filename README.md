@@ -1,5 +1,7 @@
 # android studio docker
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/yongjhih/android-studio.svg)](https://hub.docker.com/r/yongjhih/android-studio/)
+[![Docker Stars](https://img.shields.io/docker/stars/yongjhih/android-studio.svg)](https://hub.docker.com/r/yongjhih/android-studio/)
 [![](https://badge.imagelayers.io/yongjhih/android-studio:latest.svg)](https://imagelayers.io/?images=yongjhih/android-studio:latest)
 [![Join the chat at https://gitter.im/yongjhih/docker-android-studio](https://badges.gitter.im/yongjhih/docker-android-studio.svg)](https://gitter.im/yongjhih/docker-android-studio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
