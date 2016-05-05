@@ -16,11 +16,13 @@ ENV USER ubuntu
 ENV UID 1000
 
 RUN useradd -m -u $UID $USER && \
-    echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+    echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    chmod -R a+w ${ANDROID_HOME}
 
 #USER $USER
 
 ADD docker-entrypoint.sh /
-ENTRYPOINT /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD $ANDROID_STUDIO/bin/studio.sh
+#CMD ["${ANDROID_STUDIO}/bin/studio.sh"] # will not do variable substitution
+CMD ["/opt/android-studio/bin/studio.sh"]
