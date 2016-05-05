@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
+
 docker run -it \
-  --privileged
-  -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
-  -v $HOME/.android:/home/ubuntu/.android \
-  -v $HOME/.AndroidStudioPreview2.0:/home/ubuntu/.AndroidStudioPreview2.0 \
-  -v /dev/bus/usb:/dev/bus/usb \
-  -v /dev/kvm:/dev/kvm \
-  -v $ANDROID_HOME:/opt/android-sdk \
+  -v $HOME:$HOME \
+  -v $HOME:/home/ubuntu \
+  -v /dev/bus/usb \
+  -v /dev/kvm \
+  -v /tmp/.X11-unix \
   -e DISPLAY=$DISPLAY \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v $XAUTHORITY:/home/ubuntu/.Xauthority \
+  -w $PWD \
   --net host \
+  --privileged \
+  -e UID=$(id -u) \
+  -e GID=$(id -g) \
   yongjhih/android-studio

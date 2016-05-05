@@ -2,8 +2,8 @@ FROM yongjhih/android:jdk8-all
 
 ENV ANDROID_STUDIO /opt/android-studio
 
-ENV ANDROID_STUDIO_VERSION 2.0.0.11
-ENV ANDROID_STUDIO_URL https://dl.google.com/dl/android/studio/ide-zips/${ANDROID_STUDIO_VERSION}/android-studio-ide-143.2586769-linux.zip
+ENV ANDROID_STUDIO_VERSION 2.1.0.9
+ENV ANDROID_STUDIO_URL https://dl.google.com/dl/android/studio/ide-zips/${ANDROID_STUDIO_VERSION}/android-studio-ide-143.2790544-linux.zip
 ADD ANDROID_STUDIO_URL /tmp/tmp.zip
 
 RUN unzip /tmp/tmp.zip -d /opt && rm /tmp/tmp.zip
