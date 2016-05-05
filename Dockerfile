@@ -1,7 +1,7 @@
-FROM yongjhih/ubuntu-openjdk-8
-#FROM yongjhih/ubuntu-openjdk-8-android
+#FROM yongjhih/ubuntu-openjdk-8
+FROM yongjhih/ubuntu-openjdk-8-android-all
 
-ENV ANDROID_HOME /opt/android-sdk
+ENV ANDROID_HOME /opt/android-sdk-linux
 ENV ANDROID_STUDIO /opt/android-studio
 
 #ENV ANDROID_STUDIO_ZIP https://dl.google.com/dl/android/studio/ide-zips/1.5.1.0/android-studio-ide-141.2456560-linux.zip
@@ -24,6 +24,9 @@ ENV UID 1000
 RUN useradd -m -u $UID $USER && \
     echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER $USER
+#USER $USER
+
+ADD docker-entrypoint.sh /
+ENTRYPOINT /docker-entrypoint.sh
 
 CMD $ANDROID_STUDIO/bin/studio.sh
