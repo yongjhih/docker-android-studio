@@ -38,7 +38,7 @@ Beta (2.0-beta-2):
 
 ```sh
 docker run -it \
-  --privileged
+  --privileged \
   -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
   -v $HOME/.android:/home/ubuntu/.android \
   -v $HOME/.AndroidStudioPreview2.0:/home/ubuntu/.AndroidStudioPreview2.0 \
@@ -56,7 +56,7 @@ Stable (1.5.1):
 
 ```sh
 docker run -it \
-  --privileged
+  --privileged \
   -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
   -v $HOME/.android:/home/ubuntu/.android \
   -v $HOME/.AndroidStudio1.5:/home/ubuntu/.AndroidStudio1.5 \
