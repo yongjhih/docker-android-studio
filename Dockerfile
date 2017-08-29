@@ -1,6 +1,8 @@
 FROM yongjhih/android:jdk8-all
 
-RUN apt-get update && apt-get install -y --no-install-recommends lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6 && \
+RUN dpkg --add-architecture i386 && \
+    apt-get update && apt-get install -y --no-install-recommends sudo lib32z1 lib32ncurses5 lib32stdc++6 lib32z1 lib32ncurses5 lib32stdc++6 && \
+
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
