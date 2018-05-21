@@ -54,20 +54,27 @@ docker run -it \
 
 Stable (1.5.1):
 
+Build (3.1):
+
+```sh
+docker build -t android-studio .
+```
+
 ```sh
 docker run -it \
   --privileged \
-  -v $HOME/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
-  -v $HOME/.android:/home/ubuntu/.android \
-  -v $HOME/.AndroidStudio1.5:/home/ubuntu/.AndroidStudio1.5 \
+  -v `pwd`/AndroidStudioProjects:/home/ubuntu/AndroidStudioProjects \
+  -v `pwd`/.android:/home/ubuntu/.android \
+  -v `pwd`/.AndroidStudio3.1:/home/ubuntu/.AndroidStudio3.1 \
+  -v `pwd`/.gradle:/home/ubuntu/.gradle \
+  -v `pwd`/opt:/opt/android-sdk \
   -v /dev/bus/usb:/dev/bus/usb \
   -v /dev/kvm:/dev/kvm \
-  -v $ANDROID_HOME:/opt/android-sdk \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v $XAUTHORITY:/home/ubuntu/.Xauthority \
   --net host \
-  yongjhih/android-studio:1.5.1
+  android-studio
 ```
 
 ## Ref.
